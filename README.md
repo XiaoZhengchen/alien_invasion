@@ -1,5 +1,16 @@
 # alien_invasion
+================
 一个简单的小游戏，《Python编程：从入门到实践》 上的demo
+***
+__alien_invasion.exe需与images文件夹保持同一目录__<br>
+***
+
+开发环境：
+--------
+    python3.5.2 win32
+    pip 8.8.1
+    pyinstall:3.3.1
+--------
 
 打包使用的是pyinstaller,百度即可下载
 在打包的时候遇到了一些问题：
@@ -10,6 +21,22 @@
 1)这种打包方式不会将资源文件也一起打包，所以在引用资源文件时使用相对路径还有资源文件最后会和执行文件放在同一文件夹内
 2)打包时的一些参数pyinstaller -F -w main.py是较常用的，-F表示将所有文件打包为一个可执行文件，-w则是表示在运行可执行文件时不需命令行，
 -F可换为-D(也是默认参数)，这会将所有文件打包为一个文件夹,包括一些注册信息，据说可以帮助找bug
+--------
+参数 	含义
+    -F 	指定打包后只生成一个exe格式的文件
+    -D 	–onedir 创建一个目录，包含exe文件，但会依赖很多文件（默认选项）
+    -c 	–console, –nowindowed 使用控制台，无界面(默认选项)
+    -w 	–windowed, –noconsole 使用窗口，无控制台
+    -p 	添加搜索路径，让其找到对应的库。
+    -i 	改变生成程序的icon图标
+--------
 找了一天bug的好处是帮助我了解了打包后的文件结构：
 打包后会在main.py当前所在的文件夹生成两个文件夹:dist,build
 dist中包含了可执行文件，而build中包含了一些图标文件，注册文件等，最重要的是错误信息的日志文件也会包含在build中
+--------
+有一些修改：
+--------
+(1).ship.py与alien.py中使用的图片设置做了改动,由
+            'images/alien.bmp'=>'./images/alien.bmp'
+(2).button.py与scoreboard.py中的字体做了改动,由
+            'pygame.font.SysFont(None, 48)'=>'pygame.font.SysFont('arial', 30)'

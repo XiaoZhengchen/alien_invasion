@@ -16,7 +16,7 @@ class Scoreboard():
 
         # 显示得分信息时显示的字体设置
         self.text_color = (30, 30, 30)
-        self.font = pygame.font.SysFont('arial', 48)
+        self.font = pygame.font.SysFont('arial', 30)
 
         # 准备初始得分图像与历史最高分图像and等级图像and生命值
         self.prep_score()
