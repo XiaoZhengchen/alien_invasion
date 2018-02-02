@@ -40,8 +40,8 @@ dist中包含了可执行文件，而build中包含了一些图标文件，注�
 
 有一些修改：
 -------
-(1).ship.py与alien.py中使用的图片设置做了改动,由
-        'images/alien.bmp'=>'./images/alien.bmp'
-(2).button.py与scoreboard.py中的字体做了改动,由
+(1).ship.py与alien.py中使用的图片设置做了改动,由<br>
+        'images/alien.bmp'=>'./images/alien.bmp'<br>
+(2).button.py与scoreboard.py中的字体做了改动,由<br>
         'pygame.font.SysFont(None, 48)'=>'pygame.font.SysFont('arial', 30)'
             
